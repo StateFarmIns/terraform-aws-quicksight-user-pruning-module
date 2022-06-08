@@ -1,0 +1,16 @@
+.terraform
+.terraform.lock.hcl
+terraform.tfstate
+terraform.tfstate.backup
+node_modules
+node_modules_production
+dist
+reports
+coverage
+release.zip
+release
+
+# stryker temp files
+.stryker-tmp
+
+.DS_Store

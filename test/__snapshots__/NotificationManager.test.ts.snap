@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotificationManager successful when gets a user who has not accessed QS recently 1`] = `
+Object {
+  "Destination": Object {
+    "CcAddresses": Array [
+      "cc1@example.com",
+      "cc2@example.com",
+    ],
+    "ToAddresses": Array [
+      "john.smith@example.com",
+    ],
+  },
+  "Message": Object {
+    "Body": Object {
+      "Html": Object {
+        "Data": "In order to <a href=\\"https://aws.amazon.com/quicksight/pricing/\\">control costs ($24/month/user)</a>,
+    your AWS QuickSight user 'quicksight-admin-role/john.smith@example.com' 
+    will be deleted when you have not accessed QuickSight in 30 days. 
+    CloudTrail records indicate that your last access was not in the last 30 days.<br /><br />
+    
+    You can keep your user by logging in and taking actions in QuickSight. 
+    Alternatively, you can do nothing, and your user will be automatically deleted. 
+    Never fear, you simply log back into QuickSight and enter your e-mail, and your user gets recreated. 
+    No dashboards or other resources will be deleted at this time (we may clean those up in the future, with notification, of course).<br /><br />
+    
+    Account Number: 1234567890<br />
+    Account Alias: MyAccountAlias<br />
+    Assumed Role: quicksight-admin-role<br />
+    Email: john.smith@example.com<br /><br />
+  
+    For further assistance, contact <a href=\\"mailto:contact@example.com\\">contact@example.com</a>. Thank you and have a fantastically fun-filled day 🥳.
+    ",
+      },
+    },
+    "Subject": Object {
+      "Data": "I: QuickSight user quicksight-admin-role/john.smith@example.com in account MyAccountAlias will be deleted",
+    },
+  },
+  "ReplyToAddresses": Array [
+    "replyTo@example.com",
+  ],
+  "Source": "MyAccountAlias Cloud Account Administrator<from@example.com>",
+  "SourceArn": "arn:aws:ses:us-east-1:1234567890:identity/example.com",
+}
+`;
+
+exports[`NotificationManager successful when gets a valid user 1`] = `
+Object {
+  "Destination": Object {
+    "CcAddresses": Array [
+      "cc1@example.com",
+      "cc2@example.com",
+    ],
+    "ToAddresses": Array [
+      "john.smith@example.com",
+    ],
+  },
+  "Message": Object {
+    "Body": Object {
+      "Html": Object {
+        "Data": "In order to <a href=\\"https://aws.amazon.com/quicksight/pricing/\\">control costs ($24/month/user)</a>,
+    your AWS QuickSight user 'quicksight-admin-role/john.smith@example.com' 
+    will be deleted when you have not accessed QuickSight in 30 days. 
+    CloudTrail records indicate that your last access was 5/9/2022.<br /><br />
+    
+    You can keep your user by logging in and taking actions in QuickSight. 
+    Alternatively, you can do nothing, and your user will be automatically deleted. 
+    Never fear, you simply log back into QuickSight and enter your e-mail, and your user gets recreated. 
+    No dashboards or other resources will be deleted at this time (we may clean those up in the future, with notification, of course).<br /><br />
+    
+    Account Number: 1234567890<br />
+    Account Alias: MyAccountAlias<br />
+    Assumed Role: quicksight-admin-role<br />
+    Email: john.smith@example.com<br /><br />
+  
+    For further assistance, contact <a href=\\"mailto:contact@example.com\\">contact@example.com</a>. Thank you and have a fantastically fun-filled day 🥳.
+    ",
+      },
+    },
+    "Subject": Object {
+      "Data": "I: QuickSight user quicksight-admin-role/john.smith@example.com in account MyAccountAlias will be deleted",
+    },
+  },
+  "ReplyToAddresses": Array [
+    "replyTo@example.com",
+  ],
+  "Source": "MyAccountAlias Cloud Account Administrator<from@example.com>",
+  "SourceArn": "arn:aws:ses:us-east-1:1234567890:identity/example.com",
+}
+`;

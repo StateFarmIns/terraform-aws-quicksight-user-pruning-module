@@ -1,0 +1,24 @@
+# --------------------------------------------
+#
+# Standard recommended semantic-release configuration.
+#
+# Alternative configurations
+#  - A .releaserc file, written in YAML or JSON, with optional extensions: .yaml/.yml/.json/.js
+#  - A release.config.js file that exports an object
+#  - A release key in the project's package.json file
+#  Source: https://semantic-release.gitbook.io/semantic-release/usage/configuration#configuration-file
+#
+#----------------------------------------------
+
+---
+branches:
+  - master
+plugins:
+  - "@semantic-release/commit-analyzer"
+  - - "@semantic-release/release-notes-generator"
+  - "@semantic-release/changelog"
+  - - "@semantic-release/git"
+    - assets:
+        - CHANGELOG.md
+        - pruneQuickSightUsers.js
+      message: "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"

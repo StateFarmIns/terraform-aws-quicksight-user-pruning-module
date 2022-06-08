@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`QuickSightUserManager retrieveUsers gets a valid one-page list of users 1`] = `
+Array [
+  QuickSightUser {
+    "arn": "arn:aws:quicksight:us-east-1:1234567890:user/default/quicksight-admin-role/john.smith@example.com",
+    "email": "john.smith@example.com",
+    "iamRole": "quicksight-admin-role",
+    "invalid": false,
+    "role": "ADMIN",
+    "stsSession": "john.smith@example.com",
+    "username": "quicksight-admin-role/john.smith@example.com",
+  },
+  QuickSightUser {
+    "arn": "arn:aws:quicksight:us-east-1:1234567890:user/default/quicksight-author-role/jill.hill@example.com",
+    "email": "jill.hill@example.com",
+    "iamRole": "quicksight-author-role",
+    "invalid": false,
+    "role": "AUTHOR",
+    "stsSession": "jill.hill@example.com",
+    "username": "quicksight-author-role/jill.hill@example.com",
+  },
+  QuickSightUser {
+    "arn": "arn:aws:quicksight:us-east-1:1234567890:user/default/quicksight-reader/lowly.reader@example.com",
+    "email": "lowly.reader@example.com",
+    "iamRole": "quicksight-reader-role",
+    "invalid": false,
+    "role": "READER",
+    "stsSession": "lowly.reader@example.com",
+    "username": "quicksight-reader-role/lowly.reader@example.com",
+  },
+]
+`;
+
+exports[`QuickSightUserManager retrieveUsers gets a valid two-page list of users 1`] = `
+Array [
+  QuickSightUser {
+    "arn": "arn:aws:quicksight:us-east-1:1234567890:user/default/quicksight-admin-role/john.smith@example.com",
+    "email": "john.smith@example.com",
+    "iamRole": "quicksight-admin-role",
+    "invalid": false,
+    "role": "ADMIN",
+    "stsSession": "john.smith@example.com",
+    "username": "quicksight-admin-role/john.smith@example.com",
+  },
+  QuickSightUser {
+    "arn": "arn:aws:quicksight:us-east-1:1234567890:user/default/quicksight-author-role/jill.hill@example.com",
+    "email": "jill.hill@example.com",
+    "iamRole": "quicksight-author-role",
+    "invalid": false,
+    "role": "AUTHOR",
+    "stsSession": "jill.hill@example.com",
+    "username": "quicksight-author-role/jill.hill@example.com",
+  },
+]
+`;

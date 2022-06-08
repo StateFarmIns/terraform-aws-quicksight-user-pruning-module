@@ -1,0 +1,14 @@
+stryker.conf.js
+webpack.config.js
+yarn.lock
+package.json
+jest.config.js
+*.md
+docs
+src
+test
+.gitignore
+.gitlab-ci.yml
+.releaserc.yml
+babel.config.json
+CODEOWNERS

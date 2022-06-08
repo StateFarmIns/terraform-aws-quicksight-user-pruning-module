@@ -1,0 +1,27 @@
+name: Pull Request Tests
+
+on:
+  pull_request:
+    branches:
+      - master
+      
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 14
+
+      - name: NPM Install
+        run: |
+          yarn
+          yarn build
+
+      - name: NPM Test
+        run: |
+          yarn test
+          yarn mutate
