@@ -1,7 +1,3 @@
-# QuickSight User Cleanup
-
-https://github.com/StateFarmIns/terraform-aws-quicksight-user-pruning
-
 # Overview
 
 QuickSight behaves differently than many other AWS services. When you log in to the AWS console, Your account isn't charged. Your account is only charged for usage.
