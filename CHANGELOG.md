@@ -4,6 +4,20 @@
 ### Bug Fixes
 
 * 🐛 Update dependencies to remove security issue ([c7d44d5](https://github.com/StateFarmIns/terraform-aws-quicksight-user-pruning-module/commit/c7d44d52ff97740e94c20635487eadfd6c7c8dd6))
+* **deps:** Update multiple deps ([1468e55](https://github.com/StateFarmIns/terraform-aws-quicksight-user-pruning-module/commit/1468e55e9b418b3fcdd75bd211ceb03a2ebe51c1))
+* **deps:** Update multiple deps ([8bb932c](https://github.com/StateFarmIns/terraform-aws-quicksight-user-pruning-module/commit/8bb932c2434477a649948872004e24a026da4c1e))
+
+
+### Features
+
+* 🎸 Update for Node18.X ([a69bb50](https://github.com/StateFarmIns/terraform-aws-quicksight-user-pruning-module/commit/a69bb5052b124e3bbbc1b12cda198246200f49f2))
+
+# 1.0.0 (2023-06-15)
+
+
+### Bug Fixes
+
+* 🐛 Update dependencies to remove security issue ([c7d44d5](https://github.com/StateFarmIns/terraform-aws-quicksight-user-pruning-module/commit/c7d44d52ff97740e94c20635487eadfd6c7c8dd6))
 
 
 ### Features
