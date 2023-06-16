@@ -1,3 +1,16 @@
+## [1.0.1](https://github.com/StateFarmIns/terraform-aws-quicksight-user-pruning-module/compare/v1.0.0...v1.0.1) (2023-06-16)
+
+
+### Bug Fixes
+
+* **deps:** Update deps and fix versioning issue ([9a53d93](https://github.com/StateFarmIns/terraform-aws-quicksight-user-pruning-module/commit/9a53d93e01a49b0603f8d3e4c27a1bbacbd2ab38))
+* **deps:** Update deps and fix versioning issue ([f988e1c](https://github.com/StateFarmIns/terraform-aws-quicksight-user-pruning-module/commit/f988e1ce6d827c4e80e17ec3d783128b55384a2d))
+* **deps:** Update deps and fix versioning issue take two ([9940217](https://github.com/StateFarmIns/terraform-aws-quicksight-user-pruning-module/commit/99402173e107fb209bdbc959e8b4c202f40e25ca))
+* **deps:** Update deps and fix versioning issue take two ([afff819](https://github.com/StateFarmIns/terraform-aws-quicksight-user-pruning-module/commit/afff819d491f8d08a0b16d65818adfda035739fe))
+* **deps:** Update multiple deps ([1468e55](https://github.com/StateFarmIns/terraform-aws-quicksight-user-pruning-module/commit/1468e55e9b418b3fcdd75bd211ceb03a2ebe51c1))
+* **deps:** Update multiple deps ([8bb932c](https://github.com/StateFarmIns/terraform-aws-quicksight-user-pruning-module/commit/8bb932c2434477a649948872004e24a026da4c1e))
+* **test:** Fix auto tag ([00ca438](https://github.com/StateFarmIns/terraform-aws-quicksight-user-pruning-module/commit/00ca438f6964d92e49fa24e24fa50bcf5a1b5322))
+
 ## [1.0.1](https://github.com/StateFarmIns/terraform-aws-quicksight-user-pruning-module/compare/v1.0.0...v1.0.1) (2023-06-15)
 
 
