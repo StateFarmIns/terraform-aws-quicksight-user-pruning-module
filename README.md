@@ -222,8 +222,5 @@ Below is the source for a sample CloudWatch Dashboard that shows the money saved
 Note: Change `prefix-` to your prefix.
 
 # Contributing
-Contributions are welcome!
 
-This project uses [semantic release](https://semantic-release.gitbook.io/semantic-release/). It uses conventional commits to automatically determine when to release a new version of software.
-
-A good tool for managing your commits is [git-cz](https://www.npmjs.com/package/git-cz).
+Please see [./CONTRIBUTING.md](CONTRIBUTING.md).
