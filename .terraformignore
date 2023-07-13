@@ -1,6 +1,7 @@
 stryker.conf.js
 webpack.config.js
 yarn.lock
+package.lock
 package.json
 jest.config.js
 *.md
