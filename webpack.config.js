@@ -4,7 +4,7 @@ module.exports = {
   entry: {
     pruneQuickSightUsers: "./src/pruneQuickSightUsers.ts",
   },
-  target: "node14",
+  target: "node18",
   devtool: "inline-source-map",
   mode: "production",
   module: {
