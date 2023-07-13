@@ -1,20 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`NotificationManager successful when gets a user who has not accessed QS recently 1`] = `
-Object {
-  "Destination": Object {
-    "CcAddresses": Array [
+{
+  "Destination": {
+    "CcAddresses": [
       "cc1@example.com",
       "cc2@example.com",
     ],
-    "ToAddresses": Array [
+    "ToAddresses": [
       "john.smith@example.com",
     ],
   },
-  "Message": Object {
-    "Body": Object {
-      "Html": Object {
-        "Data": "In order to <a href=\\"https://aws.amazon.com/quicksight/pricing/\\">control costs ($24/month/user)</a>,
+  "Message": {
+    "Body": {
+      "Html": {
+        "Data": "In order to <a href="https://aws.amazon.com/quicksight/pricing/">control costs ($24/month/user)</a>,
     your AWS QuickSight user 'quicksight-admin-role/john.smith@example.com' 
     will be deleted when you have not accessed QuickSight in 30 days. 
     CloudTrail records indicate that your last access was not in the last 30 days.<br /><br />
@@ -29,15 +29,15 @@ Object {
     Assumed Role: quicksight-admin-role<br />
     Email: john.smith@example.com<br /><br />
   
-    For further assistance, contact <a href=\\"mailto:contact@example.com\\">contact@example.com</a>. Thank you and have a fantastically fun-filled day 🥳.
+    For further assistance, contact <a href="mailto:contact@example.com">contact@example.com</a>. Thank you and have a fantastically fun-filled day 🥳.
     ",
       },
     },
-    "Subject": Object {
+    "Subject": {
       "Data": "I: QuickSight user quicksight-admin-role/john.smith@example.com in account MyAccountAlias will be deleted",
     },
   },
-  "ReplyToAddresses": Array [
+  "ReplyToAddresses": [
     "replyTo@example.com",
   ],
   "Source": "MyAccountAlias Cloud Account Administrator<from@example.com>",
@@ -46,20 +46,20 @@ Object {
 `;
 
 exports[`NotificationManager successful when gets a valid user 1`] = `
-Object {
-  "Destination": Object {
-    "CcAddresses": Array [
+{
+  "Destination": {
+    "CcAddresses": [
       "cc1@example.com",
       "cc2@example.com",
     ],
-    "ToAddresses": Array [
+    "ToAddresses": [
       "john.smith@example.com",
     ],
   },
-  "Message": Object {
-    "Body": Object {
-      "Html": Object {
-        "Data": "In order to <a href=\\"https://aws.amazon.com/quicksight/pricing/\\">control costs ($24/month/user)</a>,
+  "Message": {
+    "Body": {
+      "Html": {
+        "Data": "In order to <a href="https://aws.amazon.com/quicksight/pricing/">control costs ($24/month/user)</a>,
     your AWS QuickSight user 'quicksight-admin-role/john.smith@example.com' 
     will be deleted when you have not accessed QuickSight in 30 days. 
     CloudTrail records indicate that your last access was 5/9/2022.<br /><br />
@@ -74,15 +74,15 @@ Object {
     Assumed Role: quicksight-admin-role<br />
     Email: john.smith@example.com<br /><br />
   
-    For further assistance, contact <a href=\\"mailto:contact@example.com\\">contact@example.com</a>. Thank you and have a fantastically fun-filled day 🥳.
+    For further assistance, contact <a href="mailto:contact@example.com">contact@example.com</a>. Thank you and have a fantastically fun-filled day 🥳.
     ",
       },
     },
-    "Subject": Object {
+    "Subject": {
       "Data": "I: QuickSight user quicksight-admin-role/john.smith@example.com in account MyAccountAlias will be deleted",
     },
   },
-  "ReplyToAddresses": Array [
+  "ReplyToAddresses": [
     "replyTo@example.com",
   ],
   "Source": "MyAccountAlias Cloud Account Administrator<from@example.com>",
