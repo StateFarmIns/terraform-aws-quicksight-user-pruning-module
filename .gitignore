@@ -9,6 +9,7 @@ reports
 coverage
 release.zip
 release
+yarn-error.log
 
 # stryker temp files
 .stryker-tmp
