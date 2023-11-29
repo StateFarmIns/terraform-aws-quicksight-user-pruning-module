@@ -7,7 +7,7 @@
     "@aws-sdk/client-quicksight": "^3.369.0",
     "@aws-sdk/client-ses": "^3.369.0",
     "await-sleep": "^0.0.1",
-    "aws-crt": "^1.15.20"
+    "aws-crt": "^1.19.0"
   },
   "devDependencies": {
     "@aws-sdk/client-s3": "^3.369.0",
