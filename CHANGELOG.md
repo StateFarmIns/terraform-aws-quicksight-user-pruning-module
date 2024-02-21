@@ -1,3 +1,11 @@
+## [1.0.3](https://github.com/StateFarmIns/terraform-aws-quicksight-user-pruning-module/compare/v1.0.2...v1.0.3) (2024-02-21)
+
+
+### Bug Fixes
+
+* 🐛 Fix vulnerability ([bc08553](https://github.com/StateFarmIns/terraform-aws-quicksight-user-pruning-module/commit/bc085530c1522933c8e93a94f6caa339bf7b0ded))
+* 🐛 Update to NodeJS 20.x ([42a5304](https://github.com/StateFarmIns/terraform-aws-quicksight-user-pruning-module/commit/42a530413666ca9c2a5679b6d9f5cb2f1bf0f687))
+
 ## [1.0.1](https://github.com/StateFarmIns/terraform-aws-quicksight-user-pruning-module/compare/v1.0.0...v1.0.1) (2023-07-13)
 
 
