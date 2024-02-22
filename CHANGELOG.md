@@ -58,6 +58,36 @@
 
 * 🎸 Update for Node18.X ([a69bb50](https://github.com/State-Farm-Admin/terraform-aws-quicksight-user-pruning-module/commit/a69bb5052b124e3bbbc1b12cda198246200f49f2))
 
+# 1.0.0 (2024-02-22)
+
+
+### Bug Fixes
+
+* 🐛 Fix vulnerabilities in dependencies ([4e4e7cf](https://github.com/State-Farm-Admin/terraform-aws-quicksight-user-pruning-module/commit/4e4e7cf067a3dd36b01cd531cae300c3303f77f7))
+* 🐛 Fix vulnerability ([bc08553](https://github.com/State-Farm-Admin/terraform-aws-quicksight-user-pruning-module/commit/bc085530c1522933c8e93a94f6caa339bf7b0ded))
+* 🐛 Set webpack to emit node18 ([1292dc2](https://github.com/State-Farm-Admin/terraform-aws-quicksight-user-pruning-module/commit/1292dc2410da3ee83c99dcd9f3968006fdabe22f))
+* 🐛 Update dependencies to remove security issue ([c7d44d5](https://github.com/State-Farm-Admin/terraform-aws-quicksight-user-pruning-module/commit/c7d44d52ff97740e94c20635487eadfd6c7c8dd6))
+* 🐛 Update to NodeJS 20.x ([42a5304](https://github.com/State-Farm-Admin/terraform-aws-quicksight-user-pruning-module/commit/42a530413666ca9c2a5679b6d9f5cb2f1bf0f687))
+* **actions:** add more permissions for sem release ([dc6a8bb](https://github.com/State-Farm-Admin/terraform-aws-quicksight-user-pruning-module/commit/dc6a8bb89c22774d3bd254a3067bc234307f73ba))
+* **actions:** add more permissions for sem release ([78d9b01](https://github.com/State-Farm-Admin/terraform-aws-quicksight-user-pruning-module/commit/78d9b01afb2b9b254e95567cd570f4606da1fced))
+* **actions:** Dump semantic-release to latest version ([2c26f8b](https://github.com/State-Farm-Admin/terraform-aws-quicksight-user-pruning-module/commit/2c26f8bebcdc885c92754bb9c4cf89448f0d717f))
+* **actions:** Update action flow for Sem Release ([7e79e0f](https://github.com/State-Farm-Admin/terraform-aws-quicksight-user-pruning-module/commit/7e79e0ff81b238c3dc50799d6f0562f4e5ebc501))
+* **actions:** Working on Sem Release permissions ([5c618d6](https://github.com/State-Farm-Admin/terraform-aws-quicksight-user-pruning-module/commit/5c618d6d29d1a70272e9911a15af4fbac6e99bc0))
+* **deps:** Update deps and fix versioning issue ([9a53d93](https://github.com/State-Farm-Admin/terraform-aws-quicksight-user-pruning-module/commit/9a53d93e01a49b0603f8d3e4c27a1bbacbd2ab38))
+* **deps:** Update deps and fix versioning issue ([f988e1c](https://github.com/State-Farm-Admin/terraform-aws-quicksight-user-pruning-module/commit/f988e1ce6d827c4e80e17ec3d783128b55384a2d))
+* **deps:** Update deps and fix versioning issue take two ([9940217](https://github.com/State-Farm-Admin/terraform-aws-quicksight-user-pruning-module/commit/99402173e107fb209bdbc959e8b4c202f40e25ca))
+* **deps:** Update deps and fix versioning issue take two ([afff819](https://github.com/State-Farm-Admin/terraform-aws-quicksight-user-pruning-module/commit/afff819d491f8d08a0b16d65818adfda035739fe))
+* **deps:** Update multiple deps ([1468e55](https://github.com/State-Farm-Admin/terraform-aws-quicksight-user-pruning-module/commit/1468e55e9b418b3fcdd75bd211ceb03a2ebe51c1))
+* **deps:** Update multiple deps ([8bb932c](https://github.com/State-Farm-Admin/terraform-aws-quicksight-user-pruning-module/commit/8bb932c2434477a649948872004e24a026da4c1e))
+* **tags:** Small change to start tags build ([c87efe0](https://github.com/State-Farm-Admin/terraform-aws-quicksight-user-pruning-module/commit/c87efe05d59b7b02b7e0913a596e419746f91150))
+* **tags:** Small change to start tags build ([14d75a7](https://github.com/State-Farm-Admin/terraform-aws-quicksight-user-pruning-module/commit/14d75a7c8432d3687fc1a3f485cbf4bb50c40681))
+* **test:** Fix auto tag ([00ca438](https://github.com/State-Farm-Admin/terraform-aws-quicksight-user-pruning-module/commit/00ca438f6964d92e49fa24e24fa50bcf5a1b5322))
+
+
+### Features
+
+* 🎸 Update for Node18.X ([a69bb50](https://github.com/State-Farm-Admin/terraform-aws-quicksight-user-pruning-module/commit/a69bb5052b124e3bbbc1b12cda198246200f49f2))
+
 ## [1.0.3](https://github.com/StateFarmIns/terraform-aws-quicksight-user-pruning-module/compare/v1.0.2...v1.0.3) (2024-02-21)
 
 
