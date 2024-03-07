@@ -223,4 +223,4 @@ Note: Change `prefix-` to your prefix.
 
 # Contributing
 
-Please see [./CONTRIBUTING.md](CONTRIBUTING.md).
+Please see [./CONTRIBUTING.md](CONTRIBUTING.md) for details.
