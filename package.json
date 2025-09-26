@@ -43,13 +43,5 @@
     "lint": "eslint --fix src/*.ts; eslint --fix test/*.test.ts",
     "prepare": "husky",
     "pull": "git pull && .husky/scripts/update-registry.sh to-private"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "./scripts/update-registry.sh to-public",
-      "post-merge": "./scripts/update-registry.sh to-private",
-      "post-checkout": "./scripts/update-registry.sh to-private",
-      "post-rewrite": "./scripts/update-registry.sh to-private"
-    }
   }
 }
