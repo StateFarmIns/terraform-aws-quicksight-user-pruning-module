@@ -39,6 +39,8 @@
     "build": "webpack && echo '// This file is committed because Terraform needs it to be there. Source code is in src folder' > pruneQuickSightUsers.js && cat dist/pruneQuickSightUsers.js >> pruneQuickSightUsers.js",
     "test": "jest --silent",
     "mutate": "stryker run",
-    "lint": "eslint --fix src/*.ts; eslint --fix test/*.test.ts"
+    "lint": "eslint --fix src/*.ts; eslint --fix test/*.test.ts",
+    "prepare": "husky",
+    "pull": "git pull && .husky/scripts/update-registry.sh to-private"
   }
 }
