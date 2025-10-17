@@ -1,3 +1,21 @@
+# [1.1.0](https://github.com/StateFarmIns/terraform-aws-quicksight-user-pruning-module/compare/v1.0.5...v1.1.0) (2025-10-17)
+
+
+### Bug Fixes
+
+* 🐛 Add the hooks back ([4b1c2ba](https://github.com/StateFarmIns/terraform-aws-quicksight-user-pruning-module/commit/4b1c2bac6c92ae698b7682aca27baa25b684fe60))
+* 🐛 Re-add husky dependency ([0b6745a](https://github.com/StateFarmIns/terraform-aws-quicksight-user-pruning-module/commit/0b6745ae77560985e7b7957e13bd335357980044))
+* 🐛 redo hooks ([bdac01d](https://github.com/StateFarmIns/terraform-aws-quicksight-user-pruning-module/commit/bdac01d971bb552c755df408d3238d434f79402b))
+* 🐛 remove duplicate script ([5695685](https://github.com/StateFarmIns/terraform-aws-quicksight-user-pruning-module/commit/56956853358371deda77985e75af88adec321a18))
+* 🐛 remove unnecessary package.json config ([9ddf1a1](https://github.com/StateFarmIns/terraform-aws-quicksight-user-pruning-module/commit/9ddf1a1f7ff2b1747897c45d363579bd3e2e9dca))
+* 🐛 Upgrade to NodeJS 22.x due to Lambda deprecation of 20.x ([29bd989](https://github.com/StateFarmIns/terraform-aws-quicksight-user-pruning-module/commit/29bd98962472f60a59fc867988d852486e42a997))
+* ensure yarn.lock rewritten to public registry when private unreachable ([20990a5](https://github.com/StateFarmIns/terraform-aws-quicksight-user-pruning-module/commit/20990a5a965eab441188a6210a680625c3b1b430))
+
+
+### Features
+
+* 🎸 Add automatic package lock dependency changes ([95d54df](https://github.com/StateFarmIns/terraform-aws-quicksight-user-pruning-module/commit/95d54df33a2e93c58207a2c205e5ea6a0c4ccef6))
+
 ## [1.0.5](https://github.com/StateFarmIns/terraform-aws-quicksight-user-pruning-module/compare/v1.0.4...v1.0.5) (2024-08-28)
 
 
