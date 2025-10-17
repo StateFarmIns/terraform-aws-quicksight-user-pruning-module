@@ -19,7 +19,7 @@ resource "aws_lambda_function" "quicksight_cleanup" {
   description      = "Runs daily (by default) to prune inactive users from QuickSight, saving you money."
   filename         = data.archive_file.quicksight_cleanup.output_path
   source_code_hash = data.archive_file.quicksight_cleanup.output_base64sha256
-  runtime          = "nodejs20.x"
+  runtime          = "nodejs22.x"
   handler          = "${local.prune_quicksight_users_file_name}.default"
   role             = aws_iam_role.quicksight_cleanup.arn
   timeout          = 900
