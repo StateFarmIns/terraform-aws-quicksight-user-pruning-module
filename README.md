@@ -12,6 +12,8 @@ In August of 2021, we implemented automatic user pruning with this Terraform mod
 
 After deploying this module, you will have a Lambda that runs daily (or on a schedule of your choosing -- but keep in mind it is designed to run daily with the way notifications are designed). The Lambda compares CloudTrail events to current QuickSight users. It notifies users when they haven't been used for exactly 30 days (by default) and deletes them when they haven't been used in 45 or more days (by default). This will save you big chunks of money. No underlying resources are touched (yet). If a user makes a dashboard and that user is deleted, then it makes no difference. Other users with access still have access, and the original user may regain access by logging in again.
 
+By default the module will NOT delete READER users (`delete_readers = false`) because deleting them stops scheduled emailed reports and they are not billed at author/admin rates. Set `delete_readers = true` if you explicitly want READER deletions; otherwise they are skipped.
+
 # Prerequisites
 
 1. QuickSight should be enabled in the AWS account. This module provides cost-savings benefits to QuickSight and is not useful if you don't have QuickSight enabled in your account.

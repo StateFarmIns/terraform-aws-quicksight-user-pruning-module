@@ -1,5 +1,10 @@
 #!/bin/bash
 
+PRIVATE="packages.ic1.statefarm/artifactory/api/npm/npm-virtual"
+PUBLIC_NODE="registry.npmjs.org"
+PUBLIC_YARN="registry.yarnpkg.com"
+DIRECTION="$1"
+
 # If private registry not resolvable, force public registries
 # Ensures commits never contain internal endpoints outside corp network
 if ! nslookup packages.ic1.statefarm >/dev/null 2>&1; then
@@ -10,14 +15,8 @@ fi
 
 # Invoke: .husky/scripts/update-registry.sh to-private # Turn to private
 #         .husky/scripts/update-registry.sh            # Turn to public
-# Read direction from command line argument
-DIRECTION="$1"
 
-PRIVATE="packages.ic1.statefarm/artifactory/api/npm/npm-virtual"
-PUBLIC_NODE="registry.npmjs.org"
-PUBLIC_YARN="registry.yarnpkg.com"
-
-if [ "$DIRECTION" == "to-private" ]; then
+if [ "$DIRECTION" = "to-private" ]; then
   echo 'making private'
   sed -i '' "s|${PUBLIC_NODE}|${PRIVATE}|g" package-lock.json 2>/dev/null || true
   sed -i '' "s|${PUBLIC_YARN}|${PRIVATE}|g" yarn.lock 2>/dev/null || true

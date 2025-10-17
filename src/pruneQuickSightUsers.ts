@@ -44,9 +44,14 @@ export default async () => {
 			// Stryker disable next-line all "I do not care about mutating console statements"
 			console.warn(`Invalid user: ${JSON.stringify(quickSightUser)}`)
 			invalidUsers++
-		} else if (quickSightUser.lastAccess < deleteDate) {
-			usersDeleted++
-			await quickSightUserManager.deleteUser(quickSightUser)
+		} else if (quickSightUser.lastAccess < deleteDate && (process.env.deleteReaders === 'true' || quickSightUser.role !== QuickSightRole.READER)) {
+			if (quickSightUser.role === QuickSightRole.READER && process.env.deleteReaders !== 'true') {
+				// Stryker disable next-line all "I do not care about mutating console statements"
+				console.debug(`Skipping deletion of READER ${quickSightUser.username}; deleteReaders disabled.`)
+			} else {
+				usersDeleted++
+				await quickSightUserManager.deleteUser(quickSightUser)
+			}
 		} else if (enableNotification
       && quickSightUser.role !== QuickSightRole.READER // Readers get into QuickSight through a public page and probably have no idea what QuickSight is. Therefore we shouldn't email them.
       && quickSightUser.lastAccess.toLocaleDateString() === notifyDate.toLocaleDateString()) { // toLocaleDateString strips off the time. If the day matches the notify "day" then we notify the user
