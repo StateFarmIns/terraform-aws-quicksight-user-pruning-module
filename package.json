@@ -27,7 +27,7 @@
     "eslint": "^9.9.1",
     "husky": "^9.1.7",
     "jest": "^29.6.1",
-    "lodash": "^4.17.21",
+    "lodash": "^4.17.23",
     "semantic-release": "^24.1.0",
     "sinon": "^18.0.0",
     "ts-jest": "^29.2.5",
