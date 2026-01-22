@@ -22,6 +22,12 @@ variable "delete_days" {
   description = "Days since last access when we should delete the user"
 }
 
+variable "delete_readers" {
+  default     = false
+  type        = bool
+  description = "If true, delete READER role users. Defaults false to preserve scheduled emailed reports for readers."
+}
+
 variable "notification_config" {
   description = "Provide these values to enable notification. If not provided, notification is disabled."
 

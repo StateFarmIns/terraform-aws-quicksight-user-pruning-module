@@ -134,15 +134,15 @@ describe('pruneQuickSightUsers', () => {
 
 		sinon.assert.calledOnce(stubs.QuickSightUserManager.retrieveUsers)
 		sinon.assert.calledOnceWithExactly(stubs.CloudTrailUserEventManager.retrieveQuickSightUserEvents, expectedDeleteDate)
-		sinon.assert.calledOnceWithExactly(stubs.QuickSightUserManager.deleteUser, sillyBilly)
+		sinon.assert.notCalled(stubs.QuickSightUserManager.deleteUser) // Reader skipped because deleteReaders default false
 		sinon.assert.calledOnceWithExactly(stubs.NotificationManager.notifyUser, hannahBanana)
 
 		sinon.assert.callCount(stubs.CloudWatchMetricClient.queueMetric, 5)
 		sinon.assert.calledWith(stubs.CloudWatchMetricClient.queueMetric.firstCall, { MetricName: 'PriorQuickSightUsersCount', Value: validQuickSightUsers.length })
 		sinon.assert.calledWith(stubs.CloudWatchMetricClient.queueMetric.secondCall, { MetricName: 'InvalidUsersCount', Value: 0 })
-		sinon.assert.calledWith(stubs.CloudWatchMetricClient.queueMetric.thirdCall, { MetricName: 'UsersDeletedCount', Value: 1 })
+		sinon.assert.calledWith(stubs.CloudWatchMetricClient.queueMetric.thirdCall, { MetricName: 'UsersDeletedCount', Value: 0 })
 		sinon.assert.calledWith(stubs.CloudWatchMetricClient.queueMetric.getCalls()[3], { MetricName: 'NotificationsSentCount', Value: 1 })
-		sinon.assert.calledWith(stubs.CloudWatchMetricClient.queueMetric.getCalls()[4], { MetricName: 'RemainingQuickSightUsersCount', Value: validQuickSightUsers.length - 1 })
+		sinon.assert.calledWith(stubs.CloudWatchMetricClient.queueMetric.getCalls()[4], { MetricName: 'RemainingQuickSightUsersCount', Value: validQuickSightUsers.length })
 	})
 
 	it('works with IAM users', async () => {
@@ -154,9 +154,7 @@ describe('pruneQuickSightUsers', () => {
 			UserName: 'sample-user',
 			Role: 'ADMIN',
 		})
-
 		stubs.QuickSightUserManager.retrieveUsers.resolves([sampleUser])
-
 		stubs.CloudTrailUserEventManager.retrieveQuickSightUserEvents.resolves([
 			{
 				stsSession: undefined,
@@ -164,11 +162,33 @@ describe('pruneQuickSightUsers', () => {
 				eventTime: new Date(),
 			},
 		])
-
 		await pruneQuickSightUsers()
-
 		sinon.assert.notCalled(stubs.NotificationManager.notifyUser) // If not called, it means the 2 events matched
 		sinon.assert.notCalled(stubs.QuickSightUserManager.deleteUser) // If not called, it means the 2 events matched
+	})
+
+	it('deletes readers when deleteReaders=true', async () => {
+		process.env.deleteReaders = 'true'
+		const readerToDelete = new QuickSightUser({
+			Active: true,
+			Arn: 'arn:aws:quicksight:us-east-1:1234567890:user/default/quicksight-reader/silly.billy@example.com',
+			Email: 'silly.billy@example.com',
+			PrincipalId: 'federated/iam/ARIAGERHIGWFEHQOFIH:silly.billy@example.com',
+			UserName: 'quicksight-reader/silly.billy@example.com',
+			Role: 'READER',
+		})
+		const deletePastDate = new Date()
+		deletePastDate.setDate(deletePastDate.getDate() - 31)
+		stubs.QuickSightUserManager.retrieveUsers.resolves([readerToDelete])
+		stubs.CloudTrailUserEventManager.retrieveQuickSightUserEvents.resolves([
+			{
+				stsSession: readerToDelete.stsSession,
+				iamRole: readerToDelete.iamRole,
+				eventTime: deletePastDate,
+			},
+		])
+		await pruneQuickSightUsers()
+		sinon.assert.calledOnceWithExactly(stubs.QuickSightUserManager.deleteUser, readerToDelete)
 	})
 
 	it('does not notify readers', async () => {
@@ -219,7 +239,7 @@ describe('pruneQuickSightUsers', () => {
 		sinon.assert.calledWithExactly(stubs.CloudWatchMetricClient.queueMetric, { MetricName: 'InvalidUsersCount', Value: 1 })
 	})
 
-	it('does not delete someone right at deletion day, only after deletion day', async () => {
+	it('does not delete someone right at deletion day, only after deletion day (even if reader)', async () => {
 		const oneUserOnVergeOfDeletion = [new QuickSightUser({
 			Active: true,
 			Arn: 'arn:aws:quicksight:us-east-1:1234567890:user/default/quicksight-reader/silly.billy@example.com',

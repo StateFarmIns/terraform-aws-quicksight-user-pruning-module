@@ -42,6 +42,7 @@ resource "aws_lambda_function" "quicksight_cleanup" {
       accountAlias       = data.aws_iam_account_alias.current.account_alias
       deleteDays         = var.delete_days
       notifyDays         = var.notify_days
+      deleteReaders      = var.delete_readers
       enableNotification = local.enable_notification ? true : false
       contact            = local.enable_notification ? var.notification_config.contact : null
       replyTo            = local.enable_notification ? var.notification_config.reply_to : null
