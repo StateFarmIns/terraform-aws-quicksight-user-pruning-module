@@ -4,9 +4,9 @@
     "allowJs": true,
     "noImplicitAny": true,
     "sourceMap": true,
-    "module": "commonjs",
+    "module": "ESNext",
     "target": "ES2020",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "esModuleInterop": true
   }
 }
