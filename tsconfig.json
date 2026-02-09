@@ -5,8 +5,8 @@
     "noImplicitAny": true,
     "sourceMap": true,
     "module": "esnext",
-    "target": "es5",
-    "moduleResolution": "bundler",
+    "target": "ES2020",
+    "moduleResolution": "node16",
     "esModuleInterop": true
   }
 }
