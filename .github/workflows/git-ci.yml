@@ -16,16 +16,14 @@ jobs:
         with:
           node-version: 22
 
-      - name: Configure NPM Registry
-        run: echo "registry=https://registry.npmjs.org/" > .npmrc
-
       - name: NPM Install
-        run: |
-          rm -f package-lock.json
-          npm install
-          npm run build
+        run: npm ci
+
+      - name: NPM Build
+        run: npm run build
 
       - name: NPM Test
         run: |
           npm test
+          npm run mutate
           npm run mutate
