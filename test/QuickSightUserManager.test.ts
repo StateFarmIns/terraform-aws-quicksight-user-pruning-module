@@ -83,7 +83,7 @@ describe('QuickSightUserManager', () => {
 			const error: Error = { name: 'BadError', message: 'Oh no!' }
 			quickSightMock.on(ListUsersCommand).rejects(error)
 
-			await expect(quickSightUserManager.retrieveUsers()).rejects.toThrowError(error)
+			await expect(quickSightUserManager.retrieveUsers()).rejects.toThrow(error)
 		})
 	})
 
@@ -103,7 +103,7 @@ describe('QuickSightUserManager', () => {
 			const error: Error = { name: 'BadError', message: 'Oh no!' }
 			quickSightMock.on(DeleteUserCommand).rejects(error)
 
-			await expect(quickSightUserManager.deleteUser(validQuickSightUsers[0])).rejects.toThrowError(error)
+			await expect(quickSightUserManager.deleteUser(validQuickSightUsers[0])).rejects.toThrow(error)
 		})
 	})
 })
