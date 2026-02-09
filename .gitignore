@@ -16,4 +16,3 @@ yarn-error.log
 
 .DS_Store
 .npmrc
-package-lock.json
