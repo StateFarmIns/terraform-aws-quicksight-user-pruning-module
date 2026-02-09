@@ -26,4 +26,3 @@ jobs:
         run: |
           npm test
           npm run mutate
-          npm run mutate
