@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/StateFarmIns/terraform-aws-quicksight-user-pruning-module/compare/v1.1.0...v1.1.1) (2026-02-10)
+
+
+### Bug Fixes
+
+* Update dependencies and switch from yarn ([0052872](https://github.com/StateFarmIns/terraform-aws-quicksight-user-pruning-module/commit/0052872c8e552f6ebcc12c0d7f96c9b273478130))
+
 # [1.1.0](https://github.com/StateFarmIns/terraform-aws-quicksight-user-pruning-module/compare/v1.0.5...v1.1.0) (2025-10-17)
 
 
