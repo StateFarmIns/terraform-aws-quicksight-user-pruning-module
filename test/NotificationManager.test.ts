@@ -62,7 +62,7 @@ describe('NotificationManager', () => {
 			const error: Error = { name: 'MyError', message: 'Oh no!' }
 			sesClientMock.on(SendEmailCommand).rejects(error)
 
-			await expect(notificationManager.notifyUser(validQuickSightUser)).rejects.toThrowError(error)
+			await expect(notificationManager.notifyUser(validQuickSightUser)).rejects.toThrow(error)
 		})
 	})
 })

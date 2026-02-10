@@ -2,40 +2,43 @@
   "name": "terraform-aws-quicksight-user-cleanup",
   "license": "Apache-2.0",
   "dependencies": {
-    "@aws-sdk/client-cloudtrail": "^3.637.0",
-    "@aws-sdk/client-cloudwatch": "^3.637.0",
-    "@aws-sdk/client-quicksight": "^3.637.0",
-    "@aws-sdk/client-ses": "^3.637.0",
-    "await-sleep": "^0.0.1",
-    "aws-crt": "^1.21.8"
+    "@aws-sdk/client-cloudtrail": "^3.981.0",
+    "@aws-sdk/client-cloudwatch": "^3.981.0",
+    "@aws-sdk/client-quicksight": "^3.981.0",
+    "@aws-sdk/client-ses": "^3.981.0",
+    "@smithy/util-retry": "^4.2.8",
+    "aws-crt": "^1.29.0"
   },
+
   "devDependencies": {
-    "@aws-sdk/client-s3": "^3.637.0",
-    "@aws-sdk/types": "^3.609.0",
-    "@semantic-release/changelog": "^6.0.1",
-    "@semantic-release/commit-analyzer": "^13.0.0",
-    "@semantic-release/git": "^10.0.1",
-    "@semantic-release/release-notes-generator": "^14.0.1",
-    "@stryker-mutator/core": "^8.5.0",
-    "@stryker-mutator/jest-runner": "^8.5.0",
-    "@stryker-mutator/typescript-checker": "^8.5.0",
-    "@types/jest": "^29.5.12",
-    "@types/lodash": "^4.17.7",
-    "@typescript-eslint/eslint-plugin": "^8.3.0",
-    "@typescript-eslint/parser": "^8.3.0",
-    "aws-sdk-client-mock": "^4.0.1",
-    "eslint": "^9.9.1",
+    "@aws-sdk/client-s3": "^3.981.0",
+    "@aws-sdk/types": "^3.973.1",
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/commit-analyzer": "^6.3.3",
+    "@semantic-release/git": "^7.0.18",
+    "@semantic-release/release-notes-generator": "^9.0.3",
+    "@stryker-mutator/core": "^9.5.1",
+    "@stryker-mutator/jest-runner": "^9.5.1",
+    "@stryker-mutator/typescript-checker": "^9.5.1",
+    "@types/glob": "^8.1.0",
+    "@types/jest": "^30.0.0",
+    "@types/lodash": "^4.17.14",
+    "@typescript-eslint/eslint-plugin": "^8.54.0",
+    "@typescript-eslint/parser": "^8.54.0",
+    "aws-sdk-client-mock": "^4.1.0",
+    "eslint": "^9.39.2",
     "husky": "^9.1.7",
-    "jest": "^29.6.1",
-    "lodash": "^4.17.23",
-    "semantic-release": "^24.1.0",
-    "sinon": "^18.0.0",
-    "ts-jest": "^29.2.5",
-    "ts-loader": "^9.4.4",
-    "typescript": "^5.5.4",
-    "webpack": "^5.94.0",
-    "webpack-cli": "^5.1.4"
+    "jest": "^30.2.0",
+    "lodash": "^4.17.21",
+    "semantic-release": "^15.9.3",
+    "sinon": "^21.0.1",
+    "ts-jest": "^29.4.6",
+    "ts-loader": "^9.5.4",
+    "typescript": "^5.9.3",
+    "webpack": "^5.105.0",
+    "webpack-cli": "^6.0.1"
   },
+
   "scripts": {
     "build": "webpack && echo '// This file is committed because Terraform needs it to be there. Source code is in src folder' > pruneQuickSightUsers.js && cat dist/pruneQuickSightUsers.js >> pruneQuickSightUsers.js",
     "test": "jest --silent",
@@ -43,5 +46,9 @@
     "lint": "eslint --fix src/*.ts; eslint --fix test/*.test.ts",
     "prepare": "husky",
     "pull": "git pull && .husky/scripts/update-registry.sh to-private"
+  },
+
+  "overrides": {
+    "minimatch": "^9.0.5"
   }
 }

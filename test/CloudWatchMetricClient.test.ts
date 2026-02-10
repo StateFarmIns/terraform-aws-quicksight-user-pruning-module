@@ -64,7 +64,7 @@ describe('CloudWatchMetricClient', () => {
 			const error: Error = { name: 'MyError', message: 'Oh no!' }
 			cloudWatchMock.on(PutMetricDataCommand).rejects(error)
 
-			await expect(cloudWatchMetricClient.emitQueuedMetrics()).rejects.toThrowError(error)
+			await expect(cloudWatchMetricClient.emitQueuedMetrics()).rejects.toThrow(error)
 		})
 	})
 })

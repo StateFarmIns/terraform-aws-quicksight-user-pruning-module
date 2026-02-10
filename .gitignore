@@ -15,3 +15,4 @@ yarn-error.log
 .stryker-tmp
 
 .DS_Store
+.npmrc
