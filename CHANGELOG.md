@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/StateFarmIns/terraform-aws-quicksight-user-pruning-module/compare/v1.1.2...v1.1.3) (2026-02-18)
+
+
+### Bug Fixes
+
+* update xml parser ([ebf3173](https://github.com/StateFarmIns/terraform-aws-quicksight-user-pruning-module/commit/ebf31730fe07a9878fc4aec41d8957f55e7ef806))
+
 ## [1.1.2](https://github.com/StateFarmIns/terraform-aws-quicksight-user-pruning-module/compare/v1.1.1...v1.1.2) (2026-02-10)
 
 
