@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define registries first
-PRIVATE="packages.ic1.statefarm/artifactory/api/npm/npm-virtual"
+PRIVATE="registry.npmjs.org"
 PUBLIC_NODE="registry.npmjs.org"
 PUBLIC_YARN="registry.yarnpkg.com"
 

@@ -2,16 +2,15 @@
   "name": "terraform-aws-quicksight-user-cleanup",
   "license": "Apache-2.0",
   "dependencies": {
-    "@aws-sdk/client-cloudtrail": "^3.981.0",
-    "@aws-sdk/client-cloudwatch": "^3.981.0",
-    "@aws-sdk/client-quicksight": "^3.981.0",
-    "@aws-sdk/client-ses": "^3.981.0",
+    "@aws-sdk/client-cloudtrail": "^3.992.0",
+    "@aws-sdk/client-cloudwatch": "^3.992.0",
+    "@aws-sdk/client-quicksight": "^3.992.0",
+    "@aws-sdk/client-ses": "^3.992.0",
     "@smithy/util-retry": "^4.2.8",
     "aws-crt": "^1.29.0"
   },
-
   "devDependencies": {
-    "@aws-sdk/client-s3": "^3.981.0",
+    "@aws-sdk/client-s3": "^3.992.0",
     "@aws-sdk/types": "^3.973.1",
     "@semantic-release/changelog": "^5.0.1",
     "@semantic-release/commit-analyzer": "^6.3.3",
@@ -49,6 +48,7 @@
   },
 
   "overrides": {
+    "fast-xml-parser": "5.3.6",
     "minimatch": "^9.0.5"
   }
 }
