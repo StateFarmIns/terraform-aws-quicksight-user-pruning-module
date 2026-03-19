@@ -1,3 +1,10 @@
+## [1.1.4](https://github.com/StateFarmIns/terraform-aws-quicksight-user-pruning-module/compare/v1.1.3...v1.1.4) (2026-03-19)
+
+
+### Bug Fixes
+
+* Update critical vulnerabilities ([73a6df6](https://github.com/StateFarmIns/terraform-aws-quicksight-user-pruning-module/commit/73a6df61fca2204dd33a70dad82677c99b43431e))
+
 ## [1.1.3](https://github.com/StateFarmIns/terraform-aws-quicksight-user-pruning-module/compare/v1.1.2...v1.1.3) (2026-02-18)
 
 
