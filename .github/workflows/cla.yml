@@ -18,7 +18,7 @@ jobs:
     steps:
       - name: "CLA Assistant"
         if: (github.event.comment.body == 'recheck' || github.event.comment.body == 'I have read the CLA Document and I hereby sign the CLA') || github.event_name == 'pull_request_target'
-        uses: contributor-assistant/github-action@v2.3.0
+        uses: StateFarmIns/cla-assistant-lite@5bfe123a0731f017d9c29550976bf724fe0870f5 # v2.3.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # the below token should have repo scope and must be manually added by you in the repository's secret
@@ -28,8 +28,8 @@ jobs:
           path-to-signatures: 'signatures/version1/cla.json'
           path-to-document: 'https://github.com/StateFarmIns/.github/blob/master/CONTRIBUTION_LICENSE_AGREEMENT.MD' # e.g. a CLA or a DCO document
           # branch should not be protected
-          branch: 'master'
-          allowlist: user1,bot*
+          branch: 'cla-signatures'
+          allowlist: 'Clete2,dafreitag,KarlKeisel,rexb1971,*[bot]'
 
          # the followings are the optional inputs - If the optional inputs are not given, then default values will be taken
           #remote-organization-name: enter the remote organization name where the signatures should be stored (Default is storing the signatures in the same repository)

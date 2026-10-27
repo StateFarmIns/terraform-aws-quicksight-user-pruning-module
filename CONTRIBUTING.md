@@ -30,5 +30,11 @@ A good tool for managing your commits is [git-cz](https://www.npmjs.com/package/
     4. Make sure your code lints.
 4. Once you have finished making your changes, create a pull request (PR) back to the original repository
 5. Don't forget to link the PR to the original issue if you are solving one
-6. Enable the checkbox to [allow maintainer edits]([url](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/allowing-changes-to-a-pull-request-branch-created-from-a-fork)) so the branch can be updated for a merge. Once you submit your PR, a maintainer will review your proposal. We may ask questions or request additional information.
-7. Once all changes have been made and the PR has been approved, a 'maintainer' will merge the request into the repositoy
+6. Enable the checkbox to [allow maintainer edits](https://docs.github.com/en/pull-requests/how-tos/work-with-forks/allowing-changes-to-a-pull-request-branch-created-from-a-fork) so the branch can be updated for a merge. Once you submit your PR, a maintainer will review your proposal. We may ask questions or request additional information.
+7. Once all changes have been made and the PR has been approved, a 'maintainer' will merge the request into the repository
+
+## Contributor License Agreement
+
+All external contributions to State Farm open source must be covered by a signed [Contribution License Agreement](https://github.com/StateFarmIns/.github/blob/master/CONTRIBUTION_LICENSE_AGREEMENT.MD). When you open a pull request, a bot will ask you to sign by replying to it with a comment.
+
+Please follow our [Code of Conduct](https://github.com/StateFarmIns/.github/blob/master/CODE_OF_CONDUCT.md).
